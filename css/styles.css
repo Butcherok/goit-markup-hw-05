@@ -311,6 +311,7 @@ img {
 
 .work-item {
     position: relative;
+
     width: calc((100% - 60px) / 3);
     margin-right: 30px;  
     
@@ -576,6 +577,61 @@ img {
 .bsmt-soc-link:hover {
     background-color: var(--text-color-accent);
     fill: var(--footer-color-text-secondary);
+}
+
+            /* modal */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    ;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background: var(--footer-color-text-secondary);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.hero-btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--footer-color-text-secondary);
+    cursor: pointer;
+}
+
+.icon-close {
+    color: var(--text-color-secondary);
 }
 
 /* -------------------portfolio------------------------ */
